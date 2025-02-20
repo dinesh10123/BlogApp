@@ -1,0 +1,28 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div style="max-width: 600px; margin: 40px auto; background: #ffffff; padding: 20px; 
+              border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #2c3e50; text-align: center; font-size: 24px; margin-bottom: 20px;">Add Article</h1>
+    
+    {% from "includes/_formhelpers.html" import render_field %}
+    
+    <form method="POST" action="" style="display: flex; flex-direction: column;">
+      <div style="margin-bottom: 15px;">
+        {{ render_field(form.title, class_="form-control", style="width: 100%; padding: 10px; 
+                      font-size: 16px; border: 1px solid #ccc; border-radius: 5px;") }}
+      </div>
+      
+      <div style="margin-bottom: 15px;">
+        {{ render_field(form.body, class_="form-control", id="editor", style="width: 100%; 
+                      height: 150px; padding: 10px; font-size: 16px; border: 1px solid #ccc; 
+                      border-radius: 5px;") }}
+      </div>
+      
+      <input type="submit" value="Submit" 
+             style="background: #3498db; color: white; border: none; padding: 12px; 
+                    font-size: 18px; cursor: pointer; border-radius: 5px; width: 100%;">
+    </form>
+  </div>
+{% endblock %}

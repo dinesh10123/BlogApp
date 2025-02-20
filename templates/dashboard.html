@@ -1,0 +1,61 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div style="max-width: 900px; margin: 40px auto; background: #ffffff; padding: 20px; 
+              border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+    
+    <h1 style="color: #2c3e50; text-align: center; font-size: 26px; margin-bottom: 20px;">
+      Dashboard <small style="color: #777; font-size: 18px;">Welcome, {{ session.username }}</small>
+    </h1>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+      <a href="/add_article" 
+         style="background: #27ae60; color: white; padding: 10px 15px; 
+                font-size: 16px; border-radius: 5px; text-decoration: none;">
+        + Add Article
+      </a>
+    </div>
+
+    <hr style="border: 1px solid #ddd;">
+
+    <table style="width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr style="background: #3498db; color: white;">
+          <th style="padding: 10px; text-align: left;">ID</th>
+          <th style="padding: 10px; text-align: left;">Title</th>
+          <th style="padding: 10px; text-align: left;">Author</th>
+          <th style="padding: 10px; text-align: left;">Date</th>
+          <th style="padding: 10px; text-align: left;">Edit</th>
+          <th style="padding: 10px; text-align: left;">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for article in articles %}
+          <tr style="border-bottom: 1px solid #ddd;">
+            <td style="padding: 10px;">{{ article.id }}</td>
+            <td style="padding: 10px;">{{ article.title }}</td>
+            <td style="padding: 10px;">{{ article.author }}</td>
+            <td style="padding: 10px;">{{ article.create_date }}</td>
+            <td style="padding: 10px;">
+              <a href="edit_article/{{ article.id }}" 
+                 style="background: #f1c40f; color: black; padding: 6px 10px; 
+                        font-size: 14px; border-radius: 4px; text-decoration: none;">
+                Edit
+              </a>
+            </td>
+            <td style="padding: 10px;">
+              <form action="{{ url_for('delete_article', id=article.id) }}" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Delete" 
+                       style="background: #e74c3c; color: white; padding: 6px 10px; 
+                              font-size: 14px; border: none; border-radius: 4px; cursor: pointer;">
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+{% endblock %}

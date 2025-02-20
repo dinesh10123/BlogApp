@@ -1,0 +1,15 @@
+
+{% extends 'layout.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block body %}
+  <h1 class="about-title">About Us</h1>
+  <p class="about-text">
+    This is a Blogging website created using Flask with SQL.<br>
+    For more fun, explore the website.<br>
+    To read blogs, <a class="about-link" href="http://127.0.0.1:5000/articles">click here</a>
+  </p>
+{% endblock %}

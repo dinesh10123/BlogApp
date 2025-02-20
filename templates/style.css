@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-title {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .about-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .about-link {
+    color: #3498db;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .about-link:hover {
+    text-decoration: underline;
+  }
+  

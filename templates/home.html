@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div style="background: #f4f6f7; padding: 40px 20px; text-align: center; 
+              border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+    
+    <h1 style="color: #2c3e50; font-size: 36px; margin-bottom: 20px;">Welcome to BlogApp</h1>
+    <p style="font-size: 18px; color: #7f8c8d; margin-bottom: 30px;">
+      This application is built on the Python Flask framework.
+    </p>
+
+    {% if session.logged_in == NULL %}
+      <a href="/register" style="background: #3498db; color: white; padding: 12px 25px; 
+                                 font-size: 18px; border-radius: 5px; text-decoration: none; 
+                                 margin: 10px; display: inline-block;">
+        Register
+      </a>
+      <a href="/login" style="background: #2ecc71; color: white; padding: 12px 25px; 
+                             font-size: 18px; border-radius: 5px; text-decoration: none; 
+                             margin: 10px; display: inline-block;">
+        Login
+      </a>
+    {% else %}
+      <a href="/articles" style="background: #3498db; color: white; padding: 12px 25px; 
+                                 font-size: 18px; border-radius: 5px; text-decoration: none; 
+                                 margin: 10px; display: inline-block;">
+        Articles
+      </a>
+    {% endif %}
+  </div>
+{% endblock %}

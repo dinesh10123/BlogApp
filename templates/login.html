@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div style="max-width: 450px; margin: 40px auto; background: #ffffff; padding: 30px; 
+              border-radius: 10px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);">
+    <h1 style="color: #2c3e50; text-align: center; font-size: 26px; margin-bottom: 20px;">
+      Login
+    </h1>
+    
+    <form action="" method="POST" style="display: flex; flex-direction: column;">
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="username" style="font-size: 16px; color: #2c3e50;">Username</label>
+        <input type="text" name="username" class="form-control" value="{{ request.form.username }}" 
+               style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 20px;">
+        <label for="password" style="font-size: 16px; color: #2c3e50;">Password</label>
+        <input type="password" name="password" class="form-control" value="{{ request.form.password }}" 
+               style="padding: 12px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;">
+      </div>
+
+      <button type="submit" class="btn btn-primary" 
+              style="background: #3498db; color: white; padding: 14px; font-size: 18px; 
+                     border: none; border-radius: 5px; cursor: pointer; width: 100%;">
+        Submit
+      </button>
+    </form>
+  </div>
+{% endblock %}
