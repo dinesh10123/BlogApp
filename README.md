@@ -1,7 +1,7 @@
 # BloggingApp-Flask
 A simple end to end blogging application created using **flask** and **MySql**.
 
-Users can register and login to website to write a blog. Viewers without login also.
+Users can register and login to website to write a blog. Viewers without login also
 
 ## Set up
 - Create a database named *flaskapp* in **MySql**
