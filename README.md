@@ -21,28 +21,28 @@ All tables codes are written in ```database.txt``` file.
 
 class diagram
 
-![database](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/database_class.png)
+![database](https://github.com/dinesh10123/BlogApp/tree/main/imgs/database_class.png)
 
 
 ## Results
 
 Home page
 
-![Home](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/home.png)
+![Home](https://github.com/dinesh10123/BlogApp/tree/main/imgs/home.png)
 
 Register page
 
-![register](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/register.png)
+![register](https://github.com/dinesh10123/BlogApp/tree/main/imgs/register.png)
 
 Login page
 
-![login](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/login.png)
+![login](https://github.com/dinesh10123/BlogApp/tree/main/imgs/login.png)
 
 User Dashboard
-![dashboard](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/dashboard.png)
+![dashboard](https://github.com/dinesh10123/BlogApp/tree/main/imgs/dashboard.png)
 
 Add blog
-![add_article](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/add_blog.png)
+![add_article](https://github.com/dinesh10123/BlogApp/tree/main/imgs/add_blog.png)
 
 All Blogs 
-![all_blogs](https://github.com/manideep03/BloggingApp-Flask/blob/main/imgs/all_blogs.png)
+![all_blogs](https://github.com/dinesh10123/BlogApp/tree/main/imgs/all_blogs.png)
